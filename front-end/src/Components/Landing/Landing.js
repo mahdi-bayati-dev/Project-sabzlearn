@@ -1,11 +1,30 @@
 import React from "react";
 import "./Landing.css";
+import Typewriter from "typewriter-effect";
 function Landing() {
   return (
     <section class="landing">
       <div class="container">
         <h1 class="landing__title">
-          ما به هر قیمتی دوره آموزشی تولید نمی کنیم !
+          {/*! */}
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter
+                .typeString(" ما به هر قیمتی دوره آموزشی تولید نمی کنیم !!")
+                .start()
+                .pauseFor(2000)
+                .deleteAll();
+                typewriter.typeString("آکادمی آموزش برنامه نویسی سبز لرن:)")
+                .start()
+                .pauseFor(2000)
+                .deleteAll();
+
+            }}
+            options={{
+             
+              loop: true
+            }}
+          />
         </h1>
         <h2 class="landing__subtitle">
           با آکادمی سبزلرن، برنامه نویسی رو با خیال راحت یاد بگیر و پیشرفت کن.
