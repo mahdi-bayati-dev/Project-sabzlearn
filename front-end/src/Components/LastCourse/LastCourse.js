@@ -1,7 +1,7 @@
 import React from "react";
 import "./LastCourse.css";
 import SectionHeader from "../sectionHeadr/sectionHeader";
-import CourseBox from "../CourseBox/CourseBox";
+import CourseBox from "../courseBox/courseBox";
 
 
 function LastCourse() {
