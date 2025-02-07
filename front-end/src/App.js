@@ -1,17 +1,16 @@
-import React from 'react';
-import { useRoutes } from 'react-router-dom';
-import Routes from './routes';
-import './App.css';
+import React from 'react'
+import { useRoutes } from 'react-router-dom'
+import routes from './routes'
 
-function App() {
+import './App.css'
 
-  const router =useRoutes(Routes)
+export default function App() {
+
+  const router = useRoutes(routes)
+
   return (
-    <div className="App">
-      {router}
-      
+    <div>
+      { router }
     </div>
-  );
+  )
 }
-
-export default App;

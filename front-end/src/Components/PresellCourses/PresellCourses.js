@@ -1,15 +1,15 @@
 import React from "react";
 import SectionHeader from "./../SectionHeader/SectionHeader";
 
-import "./PopularCourses.css";
+import "./PresellCourses.css";
 
-export default function PopularCourses() {
+export default function PresellCourses() {
   return (
     <div className="popular">
       <div className="container">
         <SectionHeader
-          title="محبوب ترین دوره ها"
-          desc="دوره های محبوب بر اساس امتیاز دانشجوها"
+          title='دوره های در حال پیش فروش'
+          desc='متن تستی برای توضیحات دوره های پیش فروش'
         />
       </div>
     </div>

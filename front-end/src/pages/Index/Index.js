@@ -1,27 +1,26 @@
-import React from 'react'
-import Header from '../../Components/Header/Header'
-import LastCourse from '../../Components/LastCourse/LastCourse'
-import AboutUs from '../../Components/aboutUs/aboutUs'
-import PopularCourses from '../../Components/PopularCourses/PopularCourses'
-import PreSaleCourses from '../../Components/PreSaleCourses/PreSaleCourses'
-import LastArticles from '../../Components/LastArticles/LastArticles'
-import Footer from '../../Components/Footer/Footer'
+import React, { useState } from "react";
+import AboutUs from "../../Components/AboutUs/AboutUs";
+import Footer from "../../Components/Footer/Footer";
+import Header from "../../Components/Header/Header";
+import LastArticles from "../../Components/LastArticles/LastArticles";
+import LastCourses from "../../Components/LastCourses/LastCourses";
+import PopularCourses from "../../Components/PopularCourses/PopularCourses";
+import PresellCourses from "../../Components/PresellCourses/PresellCourses";
 
-import './Index.css'
+import "./Index.css";
 
-export default function Index() {
+export default function Index(props) {
+  const [show, setModalShow] = useState(true);
+
   return (
     <>
-    
-    <Header/>
-    <LastCourse/>
-    <AboutUs/>
-    <PopularCourses/>
-    <PreSaleCourses/>
-    <LastArticles/>
-    <Footer/>
-
+      <Header />
+      <LastCourses />
+      <AboutUs />
+      <PopularCourses />
+      <PresellCourses />
+      <LastArticles />
+      <Footer />
     </>
-
-  )
+  );
 }

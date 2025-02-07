@@ -1,6 +1,7 @@
-.sasses{
-    border: 2px solid green !important;
+.success {
+    border: 2px solid var(--primary-color) !important;
 }
-.error{
+
+.error {
     border: 2px solid red !important;
 }

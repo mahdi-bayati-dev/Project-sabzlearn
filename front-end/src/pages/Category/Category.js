@@ -1,15 +1,18 @@
 import React from "react";
+import Topbar from "./../../Components/Topbar/Topbar";
+import Navbar from "./../../Components/Navbar/Navbar";
+import Footer from "./../../Components/Footer/Footer";
+
 import "./Category.css";
-import TopBar from "../../Components/TopBar/TopBar";
-import NavBar from "../../Components/NavBar/NavBar";
-import Footer from "../../Components/Footer/Footer";
-import CourseBox from "../../Components/courseBox/courseBox";
-import Pagination from "../../Components/pagination/pagination";
-function Category() {
+import CourseBox from "../../Components/CourseBox/CourseBox";
+import Pagination from "../../Components/Pagination/Pagination";
+
+export default function Category() {
   return (
     <>
-      <TopBar />
-      <NavBar />
+      <Topbar />
+      <Navbar />
+
       <section className="courses">
         <div className="container">
           <div className="courses-top-bar">
@@ -60,42 +63,23 @@ function Category() {
               </form>
             </div>
           </div>
+
           <div className="courses-content">
             <div className="container">
               <div className="row">
-                <CourseBox
-                  img={"/images//courses/fareelancer.png"}
-                  title={"دوره پروژه محور متخصص جنگو"}
-                  teacher={"رضا دولتی"}
-                  price={1_000_000}
-                  users={500}
-                  rating={4.5}
-                />
-                <CourseBox
-                  img={"/images//courses/fareelancer.png"}
-                  title={"دوره پروژه محور متخصص جنگو"}
-                  teacher={"رضا دولتی"}
-                  price={1_000_000}
-                  users={500}
-                  rating={4.5}
-                />
-                <CourseBox
-                  img={"/images//courses/fareelancer.png"}
-                  title={"دوره پروژه محور متخصص جنگو"}
-                  teacher={"رضا دولتی"}
-                  price={1_000_000}
-                  users={500}
-                  rating={4.5}
-                />
+                <CourseBox />
+                <CourseBox />
+                <CourseBox />
               </div>
             </div>
           </div>
-          <Pagination/>
+
+          <Pagination />
+
         </div>
       </section>
+
       <Footer />
     </>
   );
 }
-
-export default Category;

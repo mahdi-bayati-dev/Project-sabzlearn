@@ -1,28 +1,31 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "../../Components/Footer/Footer";
-import NavBar from "../../Components/NavBar/NavBar";
-import TopBar from "../../Components/TopBar/TopBar";
-import Input from "../../Components/Form/input";
+import Button from "../../Components/Form/Button";
+import Input from "../../Components/Form/Input";
+import Navbar from "../../Components/Navbar/Navbar";
+import Topbar from "../../Components/Topbar/Topbar";
+
+import { requiredValidator, minValidator, maxValidator, emailValidator } from "../../validators/rules"; 
 
 import "./Login.css";
-import Button from "../../Components/Form/button";
 
 export default function Login() {
-  const handelLogin = (e) => {
-    e.preventDefault()
-    console.log("ورود موفق بود");
+  const userLogin = (event) => {
+    event.preventDefault();
+    console.log("User Login");
   };
+
   return (
     <>
-      <TopBar />
-      <NavBar />
+      <Topbar />
+      <Navbar />
 
       <section className="login-register">
         <div className="login">
           <span className="login__title">ورود به حساب کاربری</span>
           <span className="login__subtitle">
-            خوشحالیم دوباره میبینیمت دوست عزیز
+            خوشحالیم دوباره میبینیمت دوست عزیز :)
           </span>
           <div className="login__new-member">
             <span className="login__new-member-text">کاربر جدید هستید؟</span>
@@ -32,33 +35,40 @@ export default function Login() {
           </div>
           <form action="#" className="login-form">
             <div className="login-form__username">
-              {/* <input
-                className="login-form__username-input"
-                type="text"
-                placeholder="نام کاربری یا آدرس ایمیل"
-              /> */}
               <Input
                 className="login-form__username-input"
                 type="text"
-                element="input"
                 placeholder="نام کاربری یا آدرس ایمیل"
+                element="input"
+                validations={[
+                  requiredValidator(),
+                  minValidator(8),
+                  maxValidator(20),
+                  emailValidator()
+                ]}
               />
               <i className="login-form__username-icon fa fa-user"></i>
             </div>
             <div className="login-form__password">
               <Input
-                className="login-form__password-input"
-                type="text"
-                placeholder="رمز عبور"
                 element="input"
+                type="password"
+                className="login-form__password-input"
+                placeholder="رمز عبور"
+                validations={[
+                  requiredValidator(),
+                  minValidator(8),
+                  maxValidator(18)
+                ]}
               />
+
               <i className="login-form__password-icon fa fa-lock-open"></i>
             </div>
-
             <Button
               className="login-form__btn"
               type="submit"
-              onClick={handelLogin}
+              onClick={userLogin}
+              disabled={false}
             >
               <i className="login-form__btn-icon fas fa-sign-out-alt"></i>
               <span className="login-form__btn-text">ورود</span>
@@ -74,7 +84,7 @@ export default function Login() {
                 </span>
               </label>
               <label className="login-form__password-forget">
-                <a className="login-form__password-forget-link" href="/">
+                <a className="login-form__password-forget-link" href="#">
                   رمز عبور را فراموش کرده اید؟
                 </a>
               </label>

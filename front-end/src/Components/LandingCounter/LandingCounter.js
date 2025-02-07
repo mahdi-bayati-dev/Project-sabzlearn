@@ -1,23 +1,19 @@
-import React,{useState , useEffect} from "react";
-function LandingCounter({count}) {
-    const [courseCounter, setCourseCounter] = useState(0);
+import React, { useEffect, useState } from "react";
+
+export default function LandingCounter({ count }) {
+  const [courseCounter, setCourseCounter] = useState(0);
+
   useEffect(() => {
     let interval = setInterval(() => {
-      setCourseCounter((prev) => prev + 1);
+      setCourseCounter((prevCount) => prevCount + 1);
     }, 1);
+
     if (courseCounter === count) {
       clearInterval(interval);
     }
-    
 
-    return () => {
-      clearInterval(interval);
-    };
-  }, [count, courseCounter]);
-    return ( 
-        <span className="landing-status__count">{courseCounter}</span>
-        
-     );
+    return () => clearInterval(interval);
+  }, [courseCounter]);
+
+  return <span className="landing-status__count">{courseCounter}</span>;
 }
-
-export default LandingCounter;
