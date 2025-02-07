@@ -72,6 +72,7 @@ function LastCourse() {
           description={"سکوی پرتاپ شما به سمت موفقیت"}
           link="/"
           btnTitle={"تمامی دوره ها"}
+          btnHref={'/courses'}
         />
         <div className="courses-content">
           <div className="row">

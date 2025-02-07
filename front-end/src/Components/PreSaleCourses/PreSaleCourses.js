@@ -5,8 +5,8 @@ import SectionHeader from "../sectionHeadr/sectionHeader";
 function PreSaleCourses() {
   return (
     <>
-      <div class="popular">
-        <div class="container">
+      <div className="popular">
+        <div className="container">
           <SectionHeader
             title={"دوره های پیش فروش"}
             description={"دوره های محبوب بر اساس نظر دانشجویان"}

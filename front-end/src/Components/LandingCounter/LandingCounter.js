@@ -15,7 +15,7 @@ function LandingCounter({count}) {
     };
   }, [count, courseCounter]);
     return ( 
-        <span class="landing-status__count">{courseCounter}</span>
+        <span className="landing-status__count">{courseCounter}</span>
         
      );
 }

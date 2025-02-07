@@ -4,8 +4,8 @@ import SectionHeader from "../sectionHeadr/sectionHeader";
 function PopularCourses() {
   return (
     <>
-      <div class="popular">
-        <div class="container">
+      <div className="popular">
+        <div className="container">
           <SectionHeader
             title={"محبوب ترین دوره ها"}
             description={"دوره های محبوب بر اساس نظر دانشجویان"}

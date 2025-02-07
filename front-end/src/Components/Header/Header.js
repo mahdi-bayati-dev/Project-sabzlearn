@@ -7,7 +7,7 @@ import Landing from "../Landing/Landing";
 function Header() {
   return (
     <>
-      <header class="header">
+      <header className="header">
             <TopBar/>
             <NavBar/>
             <Landing/>
